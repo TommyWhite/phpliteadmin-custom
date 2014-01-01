@@ -4,9 +4,21 @@ This is just a customized installation for phpLiteAdmin.
 
 ## Installation
 
-Requires a web server with PHP 5.1 (or greater) and `php-sqlite`.
+Requires a **web server** with **PHP 5.1** (or greater), `php-sqlite` and **sqlite**.
 
-### System application (Debian way)
+### Install as webapp in public folder
+
+It works in any situation.
+
+~~~~~~~~
+sudo git clone https://github.com/irgstudio/phpliteadmin-custom.git /PATH/public_html/phpliteadmin
+~~~~~~~~
+
+### Install as global webapp
+
+If you have access to the server configuration, maybe you want to install it globally.
+
+#### Debian way with Apache
 
 ~~~~~~~~
 sudo git clone https://github.com/irgstudio/phpliteadmin-custom.git /usr/share/phpliteadmin
@@ -15,12 +27,6 @@ sudo chown 775 /usr/share/phpliteadmin/database
 sudo ln -s /usr/share/phpliteadmin/apache.conf /etc/apache2/conf-available/phpliteadmin.conf
 sudo a2enconf phpliteadmin
 sudo service apache2 reload
-~~~~~~~~
-
-### Shared server
-
-~~~~~~~~
-sudo git clone https://github.com/irgstudio/phpliteadmin-custom.git /PATH/public_html/phpliteadmin
 ~~~~~~~~
 
 ## Configuration
