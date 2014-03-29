@@ -3,20 +3,20 @@
 // This is sample configuration file
 //
 // You can configure phpliteadmin in one of 2 ways:
-// 1. Rename current configuration file to phpliteadmin.config.php and change parameters here.
-//    You can leave here only your custom settings. All other settings will be set to defaults.
+// 1. Rename phpliteadmin.config.sample.php to phpliteadmin.config.php and change parameters in there.
+//    You can set only your custom settings in phpliteadmin.config.php. All other settings will be set to defaults.
 // 2. Change parameters directly in main phpliteadmin.php file
 //
 // Please see http://code.google.com/p/phpliteadmin/wiki/Configuration for more details
 
 //password to gain access
-$password = 'alu1432';
+$password = 'admin';
 
 //directory relative to this file to search for databases (if false, manually list databases in the $databases variable)
 $directory = './database';
 
 //whether or not to scan the subdirectories of the above directory infinitely deep
-$subdirectories = false;
+$subdirectories = true;
 
 //if the above $directory variable is set to false, you must specify the databases manually in an array as the next variable
 //if any of the databases do not exist as they are referenced by their path, they will be created automatically
@@ -52,28 +52,19 @@ $charsNum = 300;
 
 //a list of custom functions that can be applied to columns in the databases
 //make sure to define every function below if it is not a core PHP function
-$custom_functions = array('md5', 'md5rev', 'sha1', 'sha1rev', 'time', 'mydate', 'strtotime', 'myreplace');
+$custom_functions = array(
+	'md5', 'sha1', 'time', 'strtotime',
+	// add the names of your custom functions to this array
+	/* 'leet_text', */
+);
 
-//define all the non-core custom functions
-function md5rev($value)
+// define your custom functions here
+/*
+function leet_text($value)
 {
-	return strrev(md5($value));
+  return strtr($value, 'eaAsSOl', '344zZ01');
 }
-
-function sha1rev($value)
-{
-	return strrev(sha1($value));
-}
-
-function mydate($value)
-{
-	return date('g:ia n/j/y', intval($value));
-}
-
-function myreplace($value)
-{
-	return preg_replace('/[^A-Za-z0-9]/', '', strval($value));	
-}
+*/
 
 
 /* ---- Advanced options ---- */
