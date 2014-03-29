@@ -11,7 +11,7 @@ Requires a **web server** with **PHP 5.1** (or greater), `php-sqlite` and **sqli
 It works in any situation.
 
 ~~~~~~~~
-git clone https://github.com/irgstudio/phpliteadmin-custom.git 
+git clone https://github.com/irgstudio/phpliteadmin-custom.git
 sudo mv phpliteadmin-custom /var/www/html/phpliteadmin
 ~~~~~~~~
 
