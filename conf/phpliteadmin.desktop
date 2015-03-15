@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=phpLiteAdmin
+Comment=SQLite management over web
+Exec=sensible-browser http://localhost/phpliteadmin/
+Terminal=false
+Type=Application
+Icon=phpliteadmin
+Categories=Development;Database;
